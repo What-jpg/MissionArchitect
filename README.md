@@ -1,78 +1,58 @@
 # Mission Architect
 
-Ігровий прототип на Godot 4 за концепцією v3 від 14.11.2026. Одиночна офлайн гра українською та англійською: проєктування ракети, виліт із Землі, трансфер, супутник або ручна посадка на Місяць. Підключено надані користувачем асети: персонаж, ракета, лендер, станції хабу, планети, місячна поверхня, значки й кнопки. Візуальні об’єкти та макети екранів збережено в окремих сценах Godot.
+A game prototype built with Godot 4 based on concept v3 dated November 14, 2026. A single-player offline game in Ukrainian and English: design a rocket, launch from Earth, perform a transfer, deploy a satellite, or manually land on the Moon. User-provided assets have been integrated: character, rocket, lander, hub stations, planets, lunar surface, icons, and buttons. Visual objects and screen layouts are stored in separate Godot scenes.
 
-## Запуск
+## Launching the Game
 
-Відкрити `project.godot` у Godot 4.7.2 та натиснути **F5**, або виконати `./launch.sh`. Перевірено на Godot 4.7.2, Linux, OpenGL Compatibility. Інші версії 4.x і ОС окремо не перевірялися. Для пакета `.pck`: `godot --main-pack build/MissionArchitect.pck`.
+Open `project.godot` in Godot 4.7.2 and press **F5**, or run `./launch.sh`. Tested with Godot 4.7.2 on Linux using OpenGL Compatibility. Other Godot 4.x versions and operating systems have not been tested separately.
 
-Гра та UI рендеряться у **1920×1080**. Геометрія і фізика світу залишаються в локальних одиницях 320×180 під масштабом ×6; CanvasLayer інтерфейсу має незалежну нативну роздільність. Шрифт **Mission Pixel** на основі Pixelify Sans читається без збільшення старого низькороздільного тексту. Перевірено весь український алфавіт, включно з Ґ, Є, І та Ї; ліцензія OFL збережена в `assets/fonts/`.
+The game and UI are rendered at **1920×1080**. World geometry and physics remain in local 320×180 units at ×6 scale.
 
-Спрайти повторно вирізані з вихідних JPG у потрійній щільності. Вони показуються з nearest, без mipmaps; інтерфейс і драбина наукового комплексу також залишаються піксельними. Карта має окрему земну місію та один кластер із трьох місячних точок. Для Землі видно крапкову орбіту, для Місяця — пряма стрілка від Землі до Місяця. Кільця орбіти Місяця немає.
 
-Для орбіти Землі маршрут гри: **виліт → звіт вильоту → орбітальний імпульс → звіт місії**. Етап польоту на карті для неї прибрано. Місячні місії зберігають трансфер і керовану посадку.
+## Getting Started
 
-## Початок гри
+1. Select “New Expedition” → choose a normal game or enable the sandbox checkbox → select “Start Expedition”. Sandbox mode unlocks all missions and parts, removes costs, and disables record tracking.
+2. In the hub, approach the console and press **E** to select a mission. Then approach the workbench and press **E** to open the workshop. Scroll through the builder tabs using the mouse wheel. Parts and fuel are paid for together at launch. The construction price represents reserved expenses; money is deducted only after confirmation.
+3. Approach the rocket → press **E** → confirm launch. The default starter rocket can complete the first orbital mission. After launch, a separate screen displays the remaining resources.
+4. In orbit, press Space or the “Impulse” button. Data collected after a mission can be sold or spent on research in the laboratory. Unlocking the next mission requires both successful completion of the previous mission and the corresponding research.
+5. On the Moon, control rotation and thrust. The landing pad is also visible on the minimap. A soft touchdown outside the target area allows another takeoff using the remaining fuel.
 
-1. «Нова експедиція» → звичайна гра або прапорець sandbox → «Почати експедицію». Пісочниця відкриває всі місії й деталі, прибирає витрати та запис рекордів.
-2. У хабі підійдіть до консолі й натисніть **E**, щоб обрати місію. Далі підійдіть до робочого столу й натисніть **E**, щоб відкрити майстерню. Вкладки конструктора прокручуються коліщатком. Деталі й паливо оплачуються разом при запуску. Ціна конструкції — резерв витрат; гроші списуються лише після підтвердження.
-3. Підійдіть до ракети → **E** → підтвердження запуску. Стандартна початкова ракета може виконати першу орбітальну місію. Після вильоту є окремий екран залишків ресурсів.
-4. На орбіті натисніть Пробіл або кнопку «Імпульс». Дані після місії продаються або витрачаються на дослідження в лабораторії. Для наступної місії потрібні і успіх попередньої, і відповідне дослідження. Спектрометр і детектор льоду відкриваються окремими дослідженнями.
-5. На Місяці керуйте поворотом і тягою. Золотий майданчик видно також на мінікарті. М’який контакт поза ціллю дозволяє повторний зліт із залишком палива.
+## Controls
 
-Ці пояснення розміщені в README та добровільному Гайді. Конструктор не оцінює шанс успіху, не показує TWR чи Δv та не робить перевірку готовності. Купівля обмежена грошима; фізично невдала конструкція все одно може бути запущена.
-
-## Керування
-
-| Дія | Клавіатура | Геймпад у фіналі |
+| Action | Keyboard | Gamepad in the final version |
 |---|---|---|
-| Рух у хабі / поворот лендера | A/D або ←/→ | Лівий стік |
-| Драбина між поверхами | S/↓ — вниз, W/↑ — вгору; рух анімований | — |
-| Відкрити станцію | Тільки E поруч із об’єктом, на тому самому поверсі | — |
-| Тяга / імпульс | W / ↑ / Пробіл | A / правий тригер |
-| Пауза | Esc | Start |
+| Move in the hub / rotate the lander | A/D or ←/→ | Left stick |
+| Ladder between floors | S/↓ — down, W/↑ — up; movement is animated | — |
+| Open a station | E only when near the object and on the same floor | — |
+| Thrust / impulse | W / ↑ / Space | A / right trigger |
+| Pause | Esc | Start |
 
-На початку кожного вильоту й трансферу темп **×1** відповідає фактичному прискоренню часу **×4**. Кнопка **×2** перемикає на фактичне **×8**; повторне натискання повертає ×1/×4. Орбітальний скіл-чек і посадка завжди йдуть у реальному часі — вибраний раніше темп на них не впливає. Пауза дозволяє завершити поточну місію із втратою апарата. Мова перемикається в меню або архіві.
+## Implemented Features
 
-## Що реалізовано
+- Two-story science complex: archive, mission control, communications, laboratory, and workshop.
+- Rocket builder: 1–2 stages, engines, fuel for each stage, panels, batteries, antennas, radar, instruments, landing legs, altimeter, satellite, part class, and operating time. Six resources with neutral indicators.
+- Four sequential missions, two Earth orbits, three difficulty levels (“Young Astronaut”, “Engineer”, “Mission Director”), and sandbox mode.
+- Launch sequence with atmospheric layers and speed markers. Transfers are available only for lunar missions and include a trajectory, data transmission, and four possible events.
+- Lunar flight, collisions, and soft/hard touchdown mechanics.
+- Comprehensive economy system (balance details and results are documented in `docs/ECONOMY.md`).
+- Reports with reason codes, scores up to 100, ranks, and local records.
 
-- Двоповерховий науковий комплекс: єдиний персонаж, архів, центр керування, зв’язок, ангар, лабораторія, майстерня та центральна драбина з наданого асета.
-- Конструктор: 1–2 ступені, двигуни, паливо кожного ступеня, панелі, батареї, антени, радар, прилади, опори, альтіметр, супутник, клас деталей, час роботи. Шість ресурсів із нейтральними шкалами.
-- Чотири послідовні місії, дві земні орбіти, три рівні складності («Юний астронавт», «Інженер», «Директор місії») та sandbox.
-- Виліт із шарами атмосфери й маркерами швидкості (ракета на екрані летить цілою; ступені враховуються в розрахунках). Трансфер лише для місячних місій: траєкторія, передача даних і чотири можливі події.
-- Орбітальний таймінг; три місячні райони шириною 960 пікселів, камера 320 пікселів. Гравітація, інерція, тяга за кутом, залишкове паливо, полігональні зіткнення, м’який/жорсткий контакт, аварія, тіні полюса.
-- Економіка за v3: дані = D_база·M·(1−e^(−V/V₀))·L·K·T, ROI за базовим курсом 100, супутник-страховка рівнів 1–3 з порогами T/R (дані після звіту, не під час покупок), екстрений грант лише до першого супутника, конвертер 70–130 із графіком. Деталі й результати балансу — `docs/ECONOMY.md`.
-- Звіти з кодами причин, оцінка до 100 і ранги, локальні рекорди за балами та ROI, ім’я дослідника, архів конструкцій, обмін кодом `MA1:…`, JSON-збереження з резервною копією.
+## Files
 
-## Файли
+- `scripts/sim.gd` — pure calculations without UI; reads balance JSON.
+- `scripts/game_state.gd` — autoloaded game state, exchange rate, economy, progress, input, and saving.
+- `scripts/lander.gd` — custom physics; convex shape queries against the same surface polygon that is rendered.
+- `scripts/main.gd` and `scenes/Main.tscn` — scene transitions, UI data binding, and flight simulation.
+- `scenes/Hub.tscn`, `scenes/hub/` — science complex, character, ladder, and interactive objects.
+- `scenes/vehicles/`, `scenes/world/` — vehicles, flight, and editable polygons for three lunar regions.
+- `scenes/screens/` — native 1920×1080 layouts, map clusters, builder row templates, and modal pause screen.
+- `assets/art/` — extracted PNGs; `assets/source_sheets/` — original JPGs.
+- `docs/EDITING.md` — how to modify scenes and graphics yourself.
+- `data/` — parts, missions, balance, Guide, and report reasons.
+- `docs/ASSETS.md` — asset list, formats, and handoff procedure.
+- `docs/IMPLEMENTATION.md` — concept compliance, simplifications, and checks.
 
-- `scripts/sim.gd` — чисті розрахунки без UI, читає JSON балансу.
-- `scripts/game_state.gd` — autoload стану, курс, економіка, прогрес, введення й збереження.
-- `scripts/lander.gd` — власна фізика; запити convex shape до того самого полігона поверхні, який малюється.
-- `scripts/main.gd` та `scenes/Main.tscn` — переходи між сценами, прив’язка даних до UI та симуляція польоту.
-- `scenes/Hub.tscn`, `scenes/hub/` — науковий комплекс, персонаж, драбина та інтерактивні об’єкти.
-- `scenes/vehicles/`, `scenes/world/` — транспорт, політ та редаговані полігони трьох місячних районів.
-- `scenes/screens/` — нативні макети 1920×1080, кластери карти, шаблони рядків конструктора та модальна пауза.
-- `assets/art/` — вирізані PNG; `assets/source_sheets/` — вихідні JPG.
-- `docs/EDITING.md` — як самостійно змінювати сцени та графіку.
-- `data/` — деталі, місії, баланс, Гайд та причини для звітів.
-- `docs/ASSETS.md` — список асетів, формати та порядок передачі.
-- `docs/IMPLEMENTATION.md` — відповідність концепції, спрощення й перевірки.
 
-Дані всіх місій зберігаються в одному числовому полі `science`, зокрема в sandbox. Дані нараховуються лише при завершенні місії; продаж і дослідження витрачають той самий баланс. Профілі версій 1–2 завантажуються зі збереженням грошей і даних, страховка стартує з рівня 0. Нове збереження має версію 3 і повністю перевіряється перед застосуванням; зіпсований файл замінюється резервною копією.
+## Downloading the Finished Game
 
-Прогрес: `user://mission_architect_v1.json`; шлях показує Godot через **Project → Open User Data Folder**. Нова експедиція замінює прогрес після явного натискання «Почати експедицію». Закриття програми під час польоту завершує місію втратою апарата: під час наступного запуску з’являється запис в архіві, після чого спрацьовує супутник-страховка або (до першого супутника) екстрений грант. Дані не нараховуються пасивно за таймером. Позиція лендера й перебіг польоту посеред місії не відновлюються.
-
-## Перевірка
-
-```bash
-# Окрема папка, щоб перевірки не торкалися ігрового прогресу
-XDG_DATA_HOME=/tmp/mission-architect-tests godot --headless --path . tests/runner.tscn
-# Знімки екранів через справжній рендер Godot, потрібен дисплей
-mkdir -p build/qa
-XDG_DATA_HOME=/tmp/mission-architect-visual godot --path . tests/runner.tscn -- --capture
-# Пакет ресурсів, що запускається через встановлений Godot
-godot --headless --path . --export-pack Linux build/MissionArchitect.pck
-```
-
-Повноцінні самостійні `.exe` / Linux-бінарники експортуються через **Project → Export** після встановлення відповідних export templates. У цьому середовищі шаблони експорту відсутні.
+Standalone `.exe` / Linux binaries can be exported through **Project → Export** after installing the corresponding export templates.
