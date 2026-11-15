@@ -1,0 +1,78 @@
+[
+  {
+    "name": [
+      "Орбіта Землі",
+      "Earth orbit"
+    ],
+    "brief": [
+      "Вивести супутник на обрану орбіту. Наука: спостереження Землі. Орбітальна швидкість на 400 км — близько 7,7 км/с (дані NASA).",
+      "Deploy a satellite in your chosen orbit. Science: Earth observation. Orbital speed at 400 km is about 7.7 km/s (NASA data)."
+    ],
+    "dv": 9.5,
+    "multiplier": 1.0,
+    "required": "camera",
+    "duration": 0,
+    "base_data": 150,
+    "research": 0,
+    "pad_x": 0,
+    "pad_width": 0,
+    "v0": 0.8
+  },
+  {
+    "name": [
+      "Море Спокою",
+      "Sea of Tranquility"
+    ],
+    "brief": [
+      "Посадка на рівнину. Хороше освітлення, широкий майданчик. Наука: знімки та сейсмічні дані. Реальна точка: 0,67° пн. ш., 23,47° сх. д. — тут сів «Аполлон-11» (дані NASA).",
+      "Land on a plain. Good light, a broad landing site. Science: images and seismic data. Real site: 0.67° N, 23.47° E — where Apollo 11 landed (NASA data)."
+    ],
+    "dv": 15.0,
+    "multiplier": 1.0,
+    "required": "camera",
+    "duration": 25,
+    "base_data": 260,
+    "research": 12,
+    "pad_x": 520,
+    "pad_width": 64,
+    "v0": 0.7
+  },
+  {
+    "name": [
+      "Місячні нагір’я",
+      "Lunar highlands"
+    ],
+    "brief": [
+      "Посадка між піками. Вузька долина. Спектрометр дає науковий множник ×1,3. Реальна точка: 8,97° пд. ш., 15,50° сх. д. — нагір’я Декарта, місце посадки «Аполлона-16» (дані NASA).",
+      "Land between peaks in a narrow valley. A spectrometer enables the ×1.3 science multiplier. Real site: 8.97° S, 15.50° E — the Descartes Highlands, Apollo 16 landing site (NASA data)."
+    ],
+    "dv": 15.0,
+    "multiplier": 1.3,
+    "required": "spectrometer",
+    "duration": 25,
+    "base_data": 250,
+    "research": 20,
+    "pad_x": 570,
+    "pad_width": 38,
+    "v0": 1.3
+  },
+  {
+    "name": [
+      "Південний полюс",
+      "South pole"
+    ],
+    "brief": [
+      "Край кратера: круті схили й тіні. Детектор льоду дає науковий множник ×1,6. Реальна точка: кратер Шеклтон, ~89,9° пд. ш. — у вічній тіні NASA LCROSS і LRO виявили ознаки водяного льоду.",
+      "Crater rim: steep slopes and shadows. An ice detector enables the ×1.6 science multiplier. Real site: Shackleton crater, ~89.9° S — in its permanent shadow NASA's LCROSS and LRO found signs of water ice."
+    ],
+    "dv": 15.3,
+    "multiplier": 1.6,
+    "required": "ice",
+    "duration": 25,
+    "base_data": 280,
+    "research": 30,
+    "pad_x": 650,
+    "pad_width": 30,
+    "v0": 3.0
+  }
+]

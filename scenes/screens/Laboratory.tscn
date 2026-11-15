@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://scenes/screens/Panel.tscn" id="base"]
+[node name="Laboratory" instance=ExtResource("base")]
+title_uk = "Лабораторія"
+title_en = "Laboratory"
+[node name="Title" parent="." index="1"]
+text = "Лабораторія"

@@ -1,0 +1,58 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[node name="FlightHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 30.0
+offset_right = 1872.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+text = "01 ВИЛІТ / 02 ПОЛІТ / 03 ФІНАЛ"
+[node name="Status" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 120.0
+offset_right = 1872.0
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 24
+[node name="Resources" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 834.0
+offset_right = 1872.0
+offset_bottom = 1050.0
+theme_override_font_sizes/font_size = 24
+[node name="Pause" type="Button" parent="."]
+offset_left = 1578.0
+offset_top = 714.0
+offset_right = 1872.0
+offset_bottom = 804.0
+text = "Esc / II"
+[node name="Speed" type="Button" parent="."]
+offset_left = 1248.0
+offset_top = 714.0
+offset_right = 1560.0
+offset_bottom = 804.0
+text = "×1"
+
+[node name="SpeedMarkers" type="Control" parent="."]
+mouse_filter = 2
+[node name="FirstCosmicSpeed" type="Label" parent="SpeedMarkers"]
+offset_left = 758.0
+offset_top = 726.0
+offset_right = 888.0
+offset_bottom = 770.0
+theme_override_font_sizes/font_size = 24
+text = "7,9 км/с"
+[node name="EscapeSpeed" type="Label" parent="SpeedMarkers"]
+offset_left = 1024.0
+offset_top = 726.0
+offset_right = 1190.0
+offset_bottom = 770.0
+theme_override_font_sizes/font_size = 24
+text = "11,2 км/с"

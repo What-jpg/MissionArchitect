@@ -1,0 +1,186 @@
+{
+  "engines": [
+    {
+      "name": [
+        "Базовий",
+        "Basic"
+      ],
+      "mass": 0.35,
+      "cost": 450,
+      "thrust": 600,
+      "isp": 350
+    },
+    {
+      "name": [
+        "Потужний",
+        "Heavy lift"
+      ],
+      "mass": 0.6,
+      "cost": 850,
+      "thrust": 1050,
+      "isp": 450
+    },
+    {
+      "name": [
+        "Вакуумний",
+        "Vacuum"
+      ],
+      "mass": 0.22,
+      "cost": 950,
+      "thrust": 180,
+      "isp": 460
+    }
+  ],
+  "instruments": [
+    {
+      "id": "camera",
+      "name": [
+        "Камера",
+        "Camera"
+      ],
+      "mass": 0.08,
+      "cost": 250,
+      "power": 8,
+      "data": 12,
+      "value": 1
+    },
+    {
+      "id": "spectrometer",
+      "name": [
+        "Спектрометр",
+        "Spectrometer"
+      ],
+      "mass": 0.16,
+      "cost": 650,
+      "power": 16,
+      "data": 18,
+      "value": 1.6
+    },
+    {
+      "id": "seismometer",
+      "name": [
+        "Сейсмометр",
+        "Seismometer"
+      ],
+      "mass": 0.12,
+      "cost": 450,
+      "power": 10,
+      "data": 14,
+      "value": 1.3
+    },
+    {
+      "id": "ice",
+      "name": [
+        "Детектор льоду",
+        "Ice detector"
+      ],
+      "mass": 0.22,
+      "cost": 950,
+      "power": 22,
+      "data": 24,
+      "value": 2
+    }
+  ],
+  "antennas": [
+    {
+      "name": [
+        "Мала",
+        "Small"
+      ],
+      "mass": 0.04,
+      "cost": 150,
+      "power": 5,
+      "rate": 25
+    },
+    {
+      "name": [
+        "Середня",
+        "Medium"
+      ],
+      "mass": 0.09,
+      "cost": 400,
+      "power": 10,
+      "rate": 65
+    },
+    {
+      "name": [
+        "Велика",
+        "Large"
+      ],
+      "mass": 0.18,
+      "cost": 800,
+      "power": 18,
+      "rate": 140
+    }
+  ],
+  "quality": [
+    {
+      "name": [
+        "Дешеві",
+        "Economy"
+      ],
+      "price": 0.7,
+      "reliability": 0.91,
+      "tolerance": 0.8
+    },
+    {
+      "name": [
+        "Стандарт",
+        "Standard"
+      ],
+      "price": 1.0,
+      "reliability": 0.98,
+      "tolerance": 1.0
+    },
+    {
+      "name": [
+        "Преміум",
+        "Premium"
+      ],
+      "price": 1.45,
+      "reliability": 0.997,
+      "tolerance": 1.05
+    }
+  ],
+  "structure_mass": 0.32,
+  "structure_cost": 250,
+  "tank_fraction": 0.008,
+  "fuel_cost": 45,
+  "launch_fee": 300,
+  "panel": {
+    "mass": 0.05,
+    "cost": 140,
+    "power": 28
+  },
+  "battery": {
+    "mass": 0.04,
+    "cost": 90,
+    "capacity": 120
+  },
+  "legs": {
+    "mass": 0.08,
+    "cost": 180
+  },
+  "altimeter": {
+    "mass": 0.03,
+    "cost": 160
+  },
+  "satellite_mass": [
+    0.1,
+    0.18,
+    0.26
+  ],
+  "satellite_cost": [
+    150,
+    500,
+    950
+  ],
+  "bus_power": 6,
+  "radar": {
+    "mass": 0.025,
+    "cost": 100,
+    "power": 3
+  },
+  "stage_cost": 200,
+  "interstage_mass": 0.15
+}

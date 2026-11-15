@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://b0cd8nosbmdyv"]
+
+[ext_resource type="Theme" uid="uid://co8qvekccd6sb" path="res://assets/interface_theme.tres" id="theme"]
+
+[node name="HubHUD" type="Control" unique_id=382826752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="Title" type="Label" parent="." unique_id=1137368624]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 30.0
+offset_right = 1860.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0.9, 0.72, 0.36, 1)
+theme_override_font_sizes/font_size = 44
+text = "НАУКОВИЙ КОМПЛЕКС"
+
+[node name="Status" type="Label" parent="." unique_id=1407119802]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 126.0
+offset_right = 1872.0
+offset_bottom = 192.0
+text = "0 млн $ / 0 МБ"
+
+[node name="Interaction" type="Label" parent="." unique_id=1855735474]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 222.0
+offset_right = 1872.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0.9, 0.72, 0.36, 1)
+text = "E — Консоль місій"
+
+[node name="Controls" type="Label" parent="." unique_id=263966251]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 1026.0
+offset_right = 1872.0
+offset_bottom = 1080.0
+theme_override_colors/font_color = Color(0.65, 0.7, 0.76, 1)
+theme_override_font_sizes/font_size = 24
+text = "A/D: рух   W/S: сходи   E: взаємодія   Esc: меню"
+
+[node name="RoomLabels" type="Control" parent="." unique_id=267267045]
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Room0" type="Label" parent="RoomLabels" unique_id=1267234846]
+layout_mode = 0
+offset_top = 522.0
+offset_right = 192.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0.64, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "АРХІВ"
+horizontal_alignment = 1
+
+[node name="Room1" type="Label" parent="RoomLabels" unique_id=1378263909]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 544.0
+offset_right = 696.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0.64, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "ЦЕНТР КЕРУВАННЯ"
+horizontal_alignment = 1
+
+[node name="Room2" type="Label" parent="RoomLabels" unique_id=665712253]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 428.0
+offset_right = 1782.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0.64, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "ЗВ’ЯЗОК"
+horizontal_alignment = 1
+
+[node name="Room3" type="Label" parent="RoomLabels" unique_id=670588810]
+layout_mode = 0
+offset_left = 922.0
+offset_top = 312.0
+offset_right = 1222.0
+offset_bottom = 342.0
+theme_override_colors/font_color = Color(0.64, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "СТАРТ"
+horizontal_alignment = 1
+
+[node name="Room4" type="Label" parent="RoomLabels" unique_id=42675676]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 828.0
+offset_right = 678.0
+offset_bottom = 858.0
+theme_override_colors/font_color = Color(0.64, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "ЛАБОРАТОРІЯ"
+horizontal_alignment = 1
+
+[node name="Room5" type="Label" parent="RoomLabels" unique_id=699130543]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 828.0
+offset_right = 960.0
+offset_bottom = 858.0
+theme_override_colors/font_color = Color(0.64, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "МАЙСТЕРНЯ"
+horizontal_alignment = 1

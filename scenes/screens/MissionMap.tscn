@@ -1,0 +1,148 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/screens/screen_shell.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/screens/MapDiagram.tscn" id="diagram"]
+[ext_resource type="Texture2D" path="res://assets/art/screens/map_bg.png" id="bg_art"]
+[node name="MissionMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+script = ExtResource("script")
+title_uk = "Карта місій"
+title_en = "Mission map"
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture_filter = 1
+texture = ExtResource("bg_art")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 44.0
+offset_right = 1372.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+text = "КАРТА МІСІЙ"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 1664.0
+offset_top = 48.0
+offset_right = 1848.0
+offset_bottom = 112.0
+text = "Хаб"
+
+[node name="Eyebrow" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 122.0
+offset_right = 1556.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "01 / ОБЕРІТЬ НАПРЯМОК ДОСЛІДЖЕННЯ"
+[node name="MapDiagram" parent="." instance=ExtResource("diagram")]
+offset_left = 72.0
+offset_top = 204.0
+offset_right = 1104.0
+offset_bottom = 726.0
+
+[node name="SelectedTitle" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 750.0
+offset_right = 1096.0
+offset_bottom = 806.0
+theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+text = "ОРБІТА ЗЕМЛІ"
+
+[node name="Brief" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 820.0
+offset_right = 1056.0
+offset_bottom = 964.0
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "Обраний напрямок місії"
+autowrap_mode = 3
+
+[node name="EarthMission" type="Button" parent="."]
+offset_left = 1180.0
+offset_top = 204.0
+offset_right = 1840.0
+offset_bottom = 288.0
+text = "ОРБІТА ЗЕМЛІ"
+
+[node name="OrbitOptions" type="OptionButton" parent="."]
+offset_left = 1180.0
+offset_top = 306.0
+offset_right = 1840.0
+offset_bottom = 370.0
+
+[node name="MoonCluster" type="Panel" parent="."]
+offset_left = 1164.0
+offset_top = 408.0
+offset_right = 1856.0
+offset_bottom = 994.0
+
+[node name="Title" type="Label" parent="MoonCluster"]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 644.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+text = "МІСЯЦЬ"
+
+[node name="Subtitle" type="Label" parent="MoonCluster"]
+offset_left = 24.0
+offset_top = 72.0
+offset_right = 644.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "ТРИ ТОЧКИ ПОСАДКИ"
+
+[node name="Missions" type="VBoxContainer" parent="MoonCluster"]
+offset_left = 24.0
+offset_top = 136.0
+offset_right = 668.0
+offset_bottom = 556.0
+theme_override_constants/separation = 20
+
+[node name="Tranquility" type="Button" parent="MoonCluster/Missions"]
+custom_minimum_size = Vector2(0,116)
+layout_mode = 2
+text = "Море Спокою"
+alignment = 0
+
+[node name="Highlands" type="Button" parent="MoonCluster/Missions"]
+custom_minimum_size = Vector2(0,116)
+layout_mode = 2
+text = "Місячні нагір’я"
+alignment = 0
+
+[node name="SouthPole" type="Button" parent="MoonCluster/Missions"]
+custom_minimum_size = Vector2(0,116)
+layout_mode = 2
+text = "Південний полюс"
+alignment = 0
+
+[node name="Footer" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 1024.0
+offset_right = 1772.0
+offset_bottom = 1064.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "MISSION ARCHITECT / 1920 × 1080"

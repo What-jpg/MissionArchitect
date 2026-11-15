@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Texture2D" path="res://assets/art/rocket.png" id="rocket"]
+[ext_resource type="SpriteFrames" path="res://assets/art/animations/rocket_exhaust.tres" id="flame"]
+[ext_resource type="Script" path="res://scripts/rocket_assembly.gd" id="assembly"]
+[node name="Rocket" type="Node2D"]
+[node name="Body" type="Sprite2D" parent="."]
+scale = Vector2(0.33333334,0.33333334)
+texture_filter = 1
+position = Vector2(0,-16)
+texture = ExtResource("rocket")
+visible = false
+[node name="Exhaust" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.33333334,0.33333334)
+texture_filter = 1
+position = Vector2(0,7)
+offset = Vector2(0,44)
+sprite_frames = ExtResource("flame")
+animation = &"rocket_exhaust"
+autoplay = "rocket_exhaust"
+[node name="Assembly" type="Node2D" parent="."]
+position = Vector2(0, 8)
+script = ExtResource("assembly")

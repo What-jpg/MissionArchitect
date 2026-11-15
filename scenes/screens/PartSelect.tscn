@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[node name="PartSelect" type="HBoxContainer"]
+size_flags_horizontal = 3
+theme = ExtResource("theme")
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(340,0)
+text = "Категорія"
+[node name="Options" type="OptionButton" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(0,58)
+size_flags_horizontal = 3
+item_count = 1
+selected = 0
+popup/item_0/text = "Деталь"

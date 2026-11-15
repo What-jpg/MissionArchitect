@@ -1,0 +1,56 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://assets/art/animations/character_idle.png" id="idle"]
+[ext_resource type="Texture2D" path="res://assets/art/animations/character_walk.png" id="walk"]
+[ext_resource type="Texture2D" path="res://assets/art/animations/character_climb.png" id="climb"]
+[sub_resource type="AtlasTexture" id="Idle0"]
+atlas = ExtResource("idle")
+region = Rect2(0, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Idle1"]
+atlas = ExtResource("idle")
+region = Rect2(96, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Idle2"]
+atlas = ExtResource("idle")
+region = Rect2(192, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Idle3"]
+atlas = ExtResource("idle")
+region = Rect2(288, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Walk0"]
+atlas = ExtResource("walk")
+region = Rect2(0, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Walk1"]
+atlas = ExtResource("walk")
+region = Rect2(96, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Walk2"]
+atlas = ExtResource("walk")
+region = Rect2(192, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Walk3"]
+atlas = ExtResource("walk")
+region = Rect2(288, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Walk4"]
+atlas = ExtResource("walk")
+region = Rect2(384, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Walk5"]
+atlas = ExtResource("walk")
+region = Rect2(480, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Climb0"]
+atlas = ExtResource("climb")
+region = Rect2(0, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Climb1"]
+atlas = ExtResource("climb")
+region = Rect2(96, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Climb2"]
+atlas = ExtResource("climb")
+region = Rect2(192, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="Climb3"]
+atlas = ExtResource("climb")
+region = Rect2(288, 0, 96, 96)
+[sub_resource type="SpriteFrames" id="Frames"]
+animations = [{"frames": [{"duration": 1.0, "texture": SubResource("Idle0")},{"duration": 1.0, "texture": SubResource("Idle1")},{"duration": 1.0, "texture": SubResource("Idle2")},{"duration": 1.0, "texture": SubResource("Idle3")}], "loop": true, "name": &"idle", "speed": 4.0},{"frames": [{"duration": 1.0, "texture": SubResource("Walk0")},{"duration": 1.0, "texture": SubResource("Walk1")},{"duration": 1.0, "texture": SubResource("Walk2")},{"duration": 1.0, "texture": SubResource("Walk3")},{"duration": 1.0, "texture": SubResource("Walk4")},{"duration": 1.0, "texture": SubResource("Walk5")}], "loop": true, "name": &"walk", "speed": 9.0},{"frames": [{"duration": 1.0, "texture": SubResource("Climb0")},{"duration": 1.0, "texture": SubResource("Climb1")},{"duration": 1.0, "texture": SubResource("Climb2")},{"duration": 1.0, "texture": SubResource("Climb3")}], "loop": true, "name": &"climb", "speed": 8.0}]
+[node name="Player" type="Node2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25,0.25)
+texture_filter = 1
+position = Vector2(0,-11)
+sprite_frames = SubResource("Frames")
+animation = &"idle"
+autoplay = "idle"

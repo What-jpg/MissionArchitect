@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Texture2D" path="res://assets/art/earth.png" id="earth"]
+[ext_resource type="Texture2D" path="res://assets/art/moon.png" id="moon"]
+[ext_resource type="Texture2D" path="res://assets/art/atmosphere.png" id="atmosphere"]
+[ext_resource type="Texture2D" path="res://assets/art/stage_1.png" id="stage"]
+[ext_resource type="PackedScene" path="res://scenes/vehicles/Rocket.tscn" id="rocket"]
+[node name="FlightWorld" type="Node2D"]
+
+[node name="Earth" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(83, 105)
+texture = ExtResource("earth")
+scale = Vector2(0.20833333333333334,0.20833333333333334)
+
+[node name="Moon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(225, 66)
+texture = ExtResource("moon")
+scale = Vector2(0.125,0.125)
+[node name="Departure" type="Marker2D" parent="."]
+position = Vector2(112,105)
+[node name="Arrival" type="Marker2D" parent="."]
+position = Vector2(207,66)
+[node name="Rocket" parent="." instance=ExtResource("rocket")]
+position = Vector2(112,105)
+scale = Vector2(0.375,0.375)

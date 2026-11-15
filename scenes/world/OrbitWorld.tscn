@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Texture2D" path="res://assets/art/earth.png" id="earth"]
+[ext_resource type="Texture2D" path="res://assets/art/moon.png" id="moon"]
+[ext_resource type="Texture2D" path="res://assets/art/atmosphere.png" id="atmosphere"]
+[ext_resource type="Texture2D" path="res://assets/art/stage_1.png" id="stage"]
+[ext_resource type="PackedScene" path="res://scenes/vehicles/Rocket.tscn" id="rocket"]
+[node name="OrbitWorld" type="Node2D"]
+
+[node name="Earth" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160, 97)
+texture = ExtResource("earth")
+scale = Vector2(0.20833333333333334,0.20833333333333334)

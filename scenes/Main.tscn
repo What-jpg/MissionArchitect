@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Script" path="res://scripts/main.gd" id="main"]
+[ext_resource type="PackedScene" path="res://scenes/Hub.tscn" id="hub"]
+[ext_resource type="PackedScene" path="res://scenes/world/LaunchWorld.tscn" id="launch"]
+[ext_resource type="PackedScene" path="res://scenes/world/FlightWorld.tscn" id="flight"]
+[ext_resource type="PackedScene" path="res://scenes/world/OrbitWorld.tscn" id="orbit"]
+[node name="MissionArchitect" type="Node2D"]
+script = ExtResource("main")
+texture_filter = 1
+scale = Vector2(6,6)
+[node name="Hub" parent="." instance=ExtResource("hub")]
+visible = false
+[node name="LaunchWorld" parent="." instance=ExtResource("launch")]
+visible = false
+[node name="FlightWorld" parent="." instance=ExtResource("flight")]
+visible = false
+[node name="OrbitWorld" parent="." instance=ExtResource("orbit")]
+visible = false
+[node name="World" type="Node2D" parent="."]
+[node name="ScreenHost" type="CanvasLayer" parent="."]

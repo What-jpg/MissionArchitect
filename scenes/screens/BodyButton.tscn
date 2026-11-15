@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[node name="BodyButton" type="Button"]
+custom_minimum_size = Vector2(0,66)
+size_flags_horizontal = 3
+theme = ExtResource("theme")
+text = "Дія"
+alignment = 0

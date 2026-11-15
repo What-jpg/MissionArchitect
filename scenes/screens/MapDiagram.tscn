@@ -1,0 +1,292 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/screens/map_diagram.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/art/earth.png" id="earth"]
+[ext_resource type="Texture2D" path="res://assets/art/moon.png" id="moon"]
+[node name="MapDiagram" type="Control"]
+custom_minimum_size = Vector2(1032,522)
+mouse_filter = 2
+script = ExtResource("script")
+
+[node name="Earth" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(240,300)
+texture = ExtResource("earth")
+
+[node name="Moon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(824,150)
+scale = Vector2(0.5,0.5)
+texture = ExtResource("moon")
+
+[node name="EarthOrbitDots" type="Node2D" parent="."]
+
+[node name="Dot00" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(388,300)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot01" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(387,319)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot02" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(383,338)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot03" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(377,357)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot04" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(368,374)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot05" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(357,390)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot06" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(345,405)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot07" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(330,417)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot08" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(314,428)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot09" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(297,437)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot10" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(278,443)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot11" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(259,447)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot12" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(240,448)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot13" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(221,447)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot14" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(202,443)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot15" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(183,437)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot16" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(166,428)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot17" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(150,417)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot18" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(135,405)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot19" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(123,390)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot20" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(112,374)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot21" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(103,357)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot22" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(97,338)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot23" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(93,319)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot24" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(92,300)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot25" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(93,281)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot26" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(97,262)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot27" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(103,243)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot28" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(112,226)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot29" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(123,210)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot30" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(135,195)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot31" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(150,183)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot32" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(166,172)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot33" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(183,163)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot34" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(202,157)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot35" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(221,153)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot36" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(240,152)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot37" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(259,153)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot38" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(278,157)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot39" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(297,163)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot40" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(314,172)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot41" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(330,183)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot42" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(345,195)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot43" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(357,210)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot44" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(368,226)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot45" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(377,243)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot46" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(383,262)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Dot47" type="Polygon2D" parent="EarthOrbitDots"]
+position = Vector2(387,281)
+polygon = PackedVector2Array(-3,-3,3,-3,3,3,-3,3)
+color = Color(0.21,0.71,0.91,1)
+
+[node name="Trajectory" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(350,272,758,164)
+width = 4.0
+default_color = Color(0.21,0.71,0.91,1)
+
+[node name="ArrowHead" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(747.025,177.25,758,164,741.907,157.915)
+width = 4.0
+default_color = Color(0.21,0.71,0.91,1)
+
+[node name="EarthLabel" type="Label" parent="."]
+offset_left = 114.0
+offset_top = 470.0
+offset_right = 494.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "ЗЕМЛЯ / СТАРТ"
+
+[node name="MoonLabel" type="Label" parent="."]
+offset_left = 760.0
+offset_top = 228.0
+offset_right = 1020.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "МІСЯЦЬ"

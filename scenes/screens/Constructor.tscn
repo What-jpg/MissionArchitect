@@ -1,0 +1,416 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/screens/screen_shell.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/art/rocket.png" id="rocket"]
+[ext_resource type="Texture2D" path="res://assets/art/icon_mass.png" id="mass"]
+[ext_resource type="Texture2D" path="res://assets/art/icon_energy.png" id="energy"]
+[ext_resource type="Texture2D" path="res://assets/art/icon_budget.png" id="budget"]
+[ext_resource type="Texture2D" path="res://assets/art/icon_data.png" id="data"]
+[ext_resource type="Texture2D" path="res://assets/art/icon_signal.png" id="signal"]
+[ext_resource type="Texture2D" path="res://assets/art/icon_time.png" id="time"]
+[sub_resource type="StyleBoxFlat" id="card"]
+bg_color = Color(0.095,0.155,0.23,1)
+border_width_bottom = 2
+border_color = Color(0.2,0.31,0.42,1)
+[sub_resource type="StyleBoxFlat" id="bar_bg"]
+bg_color = Color(0.12,0.18,0.25,1)
+[sub_resource type="StyleBoxFlat" id="bar_0"]
+bg_color = Color(0.6039215686274509,0.6470588235294118,0.6941176470588235,1)
+[sub_resource type="StyleBoxFlat" id="bar_1"]
+bg_color = Color(0.9490196078431372,0.788235294117647,0.2980392156862745,1)
+[sub_resource type="StyleBoxFlat" id="bar_2"]
+bg_color = Color(0.2980392156862745,0.6862745098039216,0.3137254901960784,1)
+[sub_resource type="StyleBoxFlat" id="bar_3"]
+bg_color = Color(0.20784313725490197,0.7137254901960784,0.9098039215686274,1)
+[sub_resource type="StyleBoxFlat" id="bar_4"]
+bg_color = Color(0.6078431372549019,0.4196078431372549,0.8705882352941177,1)
+[sub_resource type="StyleBoxFlat" id="bar_5"]
+bg_color = Color(0.9490196078431372,0.6,0.2901960784313726,1)
+[node name="Constructor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+script = ExtResource("script")
+title_uk = "Майстерня"
+title_en = "Workshop"
+
+[node name="Title" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 44.0
+offset_right = 1372.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+text = "МАЙСТЕРНЯ"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 1664.0
+offset_top = 48.0
+offset_right = 1848.0
+offset_bottom = 112.0
+text = "Хаб"
+
+[node name="Resources" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 120.0
+offset_right = 73.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = ""
+visible = false
+
+[node name="ResourceCards" type="Control" parent="."]
+mouse_filter = 2
+
+[node name="mass" type="Panel" parent="ResourceCards"]
+offset_left = 72.0
+offset_top = 150.0
+offset_right = 352.0
+offset_bottom = 278.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Icon" type="TextureRect" parent="ResourceCards/mass"]
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture_filter = 1
+texture = ExtResource("mass")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ResourceCards/mass"]
+offset_left = 72.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Маса"
+
+[node name="Value" type="Label" parent="ResourceCards/mass"]
+offset_left = 72.0
+offset_top = 54.0
+offset_right = 270.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "—"
+
+[node name="energy" type="Panel" parent="ResourceCards"]
+offset_left = 368.0
+offset_top = 150.0
+offset_right = 648.0
+offset_bottom = 278.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Icon" type="TextureRect" parent="ResourceCards/energy"]
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture_filter = 1
+texture = ExtResource("energy")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ResourceCards/energy"]
+offset_left = 72.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Енергія"
+
+[node name="Value" type="Label" parent="ResourceCards/energy"]
+offset_left = 72.0
+offset_top = 54.0
+offset_right = 270.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "—"
+
+[node name="budget" type="Panel" parent="ResourceCards"]
+offset_left = 664.0
+offset_top = 150.0
+offset_right = 944.0
+offset_bottom = 278.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Icon" type="TextureRect" parent="ResourceCards/budget"]
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture_filter = 1
+texture = ExtResource("budget")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ResourceCards/budget"]
+offset_left = 72.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Бюджет"
+
+[node name="Value" type="Label" parent="ResourceCards/budget"]
+offset_left = 72.0
+offset_top = 54.0
+offset_right = 270.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "—"
+
+[node name="data" type="Panel" parent="ResourceCards"]
+offset_left = 960.0
+offset_top = 150.0
+offset_right = 1240.0
+offset_bottom = 278.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Icon" type="TextureRect" parent="ResourceCards/data"]
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture_filter = 1
+texture = ExtResource("data")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ResourceCards/data"]
+offset_left = 72.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Дані"
+
+[node name="Value" type="Label" parent="ResourceCards/data"]
+offset_left = 72.0
+offset_top = 54.0
+offset_right = 270.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "—"
+
+[node name="signal" type="Panel" parent="ResourceCards"]
+offset_left = 1256.0
+offset_top = 150.0
+offset_right = 1536.0
+offset_bottom = 278.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Icon" type="TextureRect" parent="ResourceCards/signal"]
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture_filter = 1
+texture = ExtResource("signal")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ResourceCards/signal"]
+offset_left = 72.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Зв’язок"
+
+[node name="Value" type="Label" parent="ResourceCards/signal"]
+offset_left = 72.0
+offset_top = 54.0
+offset_right = 270.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "—"
+
+[node name="time" type="Panel" parent="ResourceCards"]
+offset_left = 1552.0
+offset_top = 150.0
+offset_right = 1832.0
+offset_bottom = 278.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Icon" type="TextureRect" parent="ResourceCards/time"]
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture_filter = 1
+texture = ExtResource("time")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ResourceCards/time"]
+offset_left = 72.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Час"
+
+[node name="Value" type="Label" parent="ResourceCards/time"]
+offset_left = 72.0
+offset_top = 54.0
+offset_right = 270.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "—"
+
+[node name="ResourceBars" type="Control" parent="."]
+mouse_filter = 2
+
+[node name="mass" type="ProgressBar" parent="ResourceBars"]
+offset_left = 88.0
+offset_top = 268.0
+offset_right = 336.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("bar_bg")
+theme_override_styles/fill = SubResource("bar_0")
+show_percentage = false
+
+[node name="energy" type="ProgressBar" parent="ResourceBars"]
+offset_left = 384.0
+offset_top = 268.0
+offset_right = 632.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("bar_bg")
+theme_override_styles/fill = SubResource("bar_1")
+show_percentage = false
+
+[node name="budget" type="ProgressBar" parent="ResourceBars"]
+offset_left = 680.0
+offset_top = 268.0
+offset_right = 928.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("bar_bg")
+theme_override_styles/fill = SubResource("bar_2")
+show_percentage = false
+
+[node name="data" type="ProgressBar" parent="ResourceBars"]
+offset_left = 976.0
+offset_top = 268.0
+offset_right = 1224.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("bar_bg")
+theme_override_styles/fill = SubResource("bar_3")
+show_percentage = false
+
+[node name="signal" type="ProgressBar" parent="ResourceBars"]
+offset_left = 1272.0
+offset_top = 268.0
+offset_right = 1520.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("bar_bg")
+theme_override_styles/fill = SubResource("bar_4")
+show_percentage = false
+
+[node name="time" type="ProgressBar" parent="ResourceBars"]
+offset_left = 1568.0
+offset_top = 268.0
+offset_right = 1816.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("bar_bg")
+theme_override_styles/fill = SubResource("bar_5")
+show_percentage = false
+
+[node name="Tabs" type="Control" parent="."]
+mouse_filter = 2
+
+[node name="Rocket" type="Button" parent="Tabs"]
+offset_left = 72.0
+offset_top = 314.0
+offset_right = 352.0
+offset_bottom = 378.0
+text = "Носій"
+
+[node name="Systems" type="Button" parent="Tabs"]
+offset_left = 368.0
+offset_top = 314.0
+offset_right = 648.0
+offset_bottom = 378.0
+text = "Системи"
+
+[node name="Science" type="Button" parent="Tabs"]
+offset_left = 664.0
+offset_top = 314.0
+offset_right = 944.0
+offset_bottom = 378.0
+text = "Наука"
+
+[node name="Design" type="Button" parent="Tabs"]
+offset_left = 960.0
+offset_top = 314.0
+offset_right = 1240.0
+offset_bottom = 378.0
+text = "Файл"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+offset_left = 72.0
+offset_top = 414.0
+offset_right = 1236.0
+offset_bottom = 988.0
+horizontal_scroll_mode = 0
+
+[node name="Body" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 18
+
+[node name="PreviewPanel" type="Panel" parent="."]
+offset_left = 1324.0
+offset_top = 314.0
+offset_right = 1848.0
+offset_bottom = 988.0
+theme_override_styles/panel = SubResource("card")
+
+[node name="Title" type="Label" parent="PreviewPanel"]
+offset_left = 40.0
+offset_top = 28.0
+offset_right = 484.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+text = "КОНСТРУКЦІЯ"
+
+[node name="Rocket" type="TextureRect" parent="PreviewPanel"]
+offset_left = 190.0
+offset_top = 132.0
+offset_right = 334.0
+offset_bottom = 564.0
+texture_filter = 1
+texture = ExtResource("rocket")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="PreviewPanel"]
+offset_left = 40.0
+offset_top = 594.0
+offset_right = 484.0
+offset_bottom = 644.0
+theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.9,0.94,0.95,1)
+text = "Aurora"
+
+[node name="Footer" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 1024.0
+offset_right = 1792.0
+offset_bottom = 1066.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(0.58,0.68,0.78,1)
+text = "Числа — характеристики. Рішення про запуск ваше."

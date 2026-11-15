@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Texture2D" path="res://assets/art/earth.png" id="earth"]
+[ext_resource type="Texture2D" path="res://assets/art/moon.png" id="moon"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/atmosphere_layer_1.png" id="sky1"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/atmosphere_layer_2.png" id="sky2"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/atmosphere_layer_3.png" id="sky3"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/launch_pad_cut.png" id="pad"]
+[ext_resource type="SpriteFrames" path="res://assets/art/animations/smoke_trail.tres" id="smoke"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/cloud_02.png" id="cloud_a"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/cloud_04.png" id="cloud_b"]
+[ext_resource type="Texture2D" path="res://assets/art/flight/cloud_05.png" id="cloud_c"]
+[ext_resource type="Texture2D" path="res://assets/art/stage_1.png" id="stage"]
+[ext_resource type="PackedScene" path="res://scenes/vehicles/Rocket.tscn" id="rocket"]
+[node name="LaunchWorld" type="Node2D"]
+
+[node name="Atmosphere" type="Node2D" parent="."]
+[node name="Sky1" type="Sprite2D" parent="Atmosphere"]
+texture_filter = 1
+centered = false
+position = Vector2(0, 40)
+scale = Vector2(0.33333334,0.33333334)
+texture = ExtResource("sky1")
+region_enabled = true
+region_rect = Rect2(480, 180, 960, 240)
+[node name="Sky2" type="Sprite2D" parent="Atmosphere"]
+texture_filter = 1
+centered = false
+position = Vector2(0, 40)
+scale = Vector2(0.33333334,0.33333334)
+texture = ExtResource("sky2")
+region_enabled = true
+region_rect = Rect2(480, 180, 960, 240)
+modulate = Color(1,1,1,0)
+[node name="Sky3" type="Sprite2D" parent="Atmosphere"]
+texture_filter = 1
+centered = false
+position = Vector2(0, 40)
+scale = Vector2(0.33333334,0.33333334)
+texture = ExtResource("sky3")
+region_enabled = true
+region_rect = Rect2(480, 180, 960, 240)
+modulate = Color(1,1,1,0)
+[node name="Pad" type="Sprite2D" parent="Atmosphere"]
+z_index = 1
+texture_filter = 1
+centered = false
+position = Vector2(92.8, 42.7)
+scale = Vector2(0.16666667,0.16666667)
+texture = ExtResource("pad")
+region_enabled = true
+region_rect = Rect2(0, 0, 768, 464)
+[node name="Clouds" type="Node2D" parent="Atmosphere"]
+[node name="Cloud0" type="Sprite2D" parent="Atmosphere/Clouds"]
+texture_filter = 1
+position = Vector2(48,-40)
+scale = Vector2(0.25,0.25)
+texture = ExtResource("cloud_a")
+metadata/base_y = -40.0
+[node name="Cloud1" type="Sprite2D" parent="Atmosphere/Clouds"]
+texture_filter = 1
+position = Vector2(250,-90)
+scale = Vector2(0.25,0.25)
+texture = ExtResource("cloud_b")
+metadata/base_y = -90.0
+[node name="Cloud2" type="Sprite2D" parent="Atmosphere/Clouds"]
+texture_filter = 1
+position = Vector2(120,-150)
+scale = Vector2(0.25,0.25)
+texture = ExtResource("cloud_c")
+metadata/base_y = -150.0
+[node name="Cloud3" type="Sprite2D" parent="Atmosphere/Clouds"]
+texture_filter = 1
+position = Vector2(290,-200)
+scale = Vector2(0.25,0.25)
+texture = ExtResource("cloud_a")
+metadata/base_y = -200.0
+[node name="Smoke" type="AnimatedSprite2D" parent="Atmosphere"]
+z_index = 2
+texture_filter = 1
+position = Vector2(152,111)
+offset = Vector2(0,-44)
+scale = Vector2(0.4,0.4)
+sprite_frames = ExtResource("smoke")
+animation = &"smoke_trail"
+visible = false
+[node name="Rocket" parent="." instance=ExtResource("rocket")]
+position = Vector2(152,103)
+
+[node name="SeparatedStage" type="Sprite2D" parent="."]
+scale = Vector2(0.33333334,0.33333334)
+texture_filter = 1
+position = Vector2(160, 122)
+texture = ExtResource("stage")
+visible = false

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[node name="NumberSlider" type="HBoxContainer"]
+size_flags_horizontal = 3
+theme = ExtResource("theme")
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(340,0)
+text = "Паливо: 36"
+[node name="Slider" type="HSlider" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(500,48)
+size_flags_horizontal = 3
+max_value = 80.0
+value = 36.0

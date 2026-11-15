@@ -1,0 +1,162 @@
+{
+  "lift": [
+    "Тяга перевищила вагу: ракета залишила стартовий майданчик.",
+    "Thrust exceeded weight: the rocket left the pad."
+  ],
+  "no_lift": [
+    "Тяга не перевищила вагу (TWR < 1). Паливо й плата за запуск втрачені, деталі повернено на склад.",
+    "Thrust did not exceed weight (TWR < 1). Fuel and launch fee were lost; hardware returned to the warehouse."
+  ],
+  "drag": [
+    "Низька тяга збільшила втрати швидкості на 10%.",
+    "Low thrust increased velocity losses by 10%."
+  ],
+  "orbit_fail": [
+    "Після вильоту запасу швидкості не вистачило для орбіти.",
+    "After ascent, the velocity budget was insufficient for orbit."
+  ],
+  "unstable": [
+    "Недобір швидкості до 5%: орбіта нестабільна, частина резерву палива витрачена.",
+    "A velocity shortfall of up to 5%: unstable orbit, part of the fuel reserve was spent."
+  ],
+  "transfer_fail": [
+    "Запасу швидкості після виходу на орбіту не вистачило для трансферу до цілі.",
+    "The velocity budget remaining after orbit insertion did not cover the transfer."
+  ],
+  "failure": [
+    "Відмова деталей завершила роботу апарата. Дешевші класи деталей відмовляють частіше.",
+    "A component failure ended spacecraft operation. Cheaper part classes fail more often."
+  ],
+  "power": [
+    "Вироблення енергії та батарей не вистачило всім приладам. Прилади низького пріоритету вимкнулися.",
+    "Generation and battery reserves could not power all instruments. Lower priority instruments shut down."
+  ],
+  "link": [
+    "Дані зараховані лише в межах доступної енергії й пропускної здатності вікон зв’язку.",
+    "Only data within the energy and communication-window capacity were credited."
+  ],
+  "ideal": [
+    "Швидкість і кут дотику залишилися в допусках: посадка успішна.",
+    "Touchdown speed and angle stayed within tolerances: landing succeeded."
+  ],
+  "hard": [
+    "Швидкість або кут перевищили допуск не більш ніж у 1,5 раза. Пошкоджено апарат: 70% даних.",
+    "Speed or angle exceeded tolerance by at most 1.5 times. The damaged vehicle retained 70% of data."
+  ],
+  "crash": [
+    "Швидкість, нахил або вихід за межі району призвели до втрати апарата. Збережено передані дані.",
+    "Speed, tilt or leaving the landing region caused vehicle loss. Transmitted data survived."
+  ],
+  "stranded": [
+    "М’який дотик поза майданчиком. Без палива апарат не зміг дістатися цілі.",
+    "Soft contact outside the landing site. Without fuel the vehicle could not reach its objective."
+  ],
+  "orbit_ideal": [
+    "Імпульс виконано у вікні: супутник вийшов на колову орбіту.",
+    "The burn was timed inside the window: the satellite reached circular orbit."
+  ],
+  "orbit_crash": [
+    "Імпульс поза вікном: орбіта не втримала супутник.",
+    "The burn missed the window: the orbit could not retain the satellite."
+  ],
+  "debris_burn": [
+    "Маневр витратив паливо й відвів апарат від сміття.",
+    "The correction used fuel and moved the vehicle away from debris."
+  ],
+  "safe": [
+    "Захисний режим призупинив збір даних і захистив електроніку.",
+    "Safe mode paused data collection and protected electronics."
+  ],
+  "damage": [
+    "Подія зменшила доступну енергію та обсяг даних.",
+    "The event reduced available energy and data."
+  ],
+  "contact": [
+    "Антена відновила сеанс передачі; батарея витратила енергію.",
+    "The antenna restored the downlink; the battery supplied energy."
+  ],
+  "satellite": [
+    "Сума грошей і непроданих даних опустилася нижче порогу супутника: він надіслав дані до рівня відновлення.",
+    "Money plus unsold data fell below the satellite threshold: it sent data up to the restore level."
+  ],
+  "grant": [
+    "Супутника ще немає, а грошей менше, ніж на найпростішу ракету: видано екстрений грант. Наступна місія отримає штраф.",
+    "There is no satellite yet and money is below the simplest rocket: an emergency grant was issued. The next mission takes a penalty."
+  ],
+  "lifetime": [
+    "Тривалість і клас деталей визначили, яку частку запланованого часу прилади пропрацювали.",
+    "Lifetime and part class determined what share of the planned time instruments operated."
+  ],
+  "interrupted": [
+    "Гру закрито під час місії. Апарат втрачено, раніше зароблені дані збережено.",
+    "The game closed during a mission. The vehicle was lost; previously earned data was preserved."
+  ],
+  "abort": [
+    "Місію завершено вручну: апарат втрачено, зараховано лише передані дані.",
+    "The mission was ended manually: the vehicle is lost, only downlinked data counts."
+  ],
+  "unstable_orbit": [
+    "Запасу швидкості забракло до 5% від потрібного: орбіта нестабільна, зелена зона імпульсу вужча.",
+    "The velocity budget fell short by up to 5%: the orbit is unstable and the burn window is narrower."
+  ],
+  "orbit_hard": [
+    "Імпульс трохи поза зеленою зоною: орбіта вийшла еліптичною, зараховано 70% даних.",
+    "The burn landed just outside the green zone: an elliptical orbit keeps 70% of the data."
+  ],
+  "debris_hit": [
+    "На робочій орбіті супутник зачепило сміття: частина приладів пошкоджена, даних менше. Радар трекінгу знижує цей ризик.",
+    "Debris struck the satellite in its working orbit: part of the instruments were damaged and data fell. A tracking radar lowers this risk."
+  ],
+  "debris_crash": [
+    "Палива на маневр не лишилось, і сміття влучило в апарат.",
+    "No fuel was left for a manoeuvre and debris struck the vehicle."
+  ],
+  "debris_miss": [
+    "Палива на маневр не вистачило, але сміття пройшло повз.",
+    "There was not enough fuel to manoeuvre, but the debris passed by."
+  ],
+  "flare_ok": [
+    "Батареї втримали прилади під час спалаху: дані зібрано повністю.",
+    "Batteries kept instruments running through the flare: data collection continued."
+  ],
+  "satellite_up": [
+    "Супутник став страховкою на орбіті. Вищий рівень замінює нижчий, нижчий не знижує поточний.",
+    "The satellite now serves as orbital insurance. A higher level replaces a lower one; a lower one never downgrades it."
+  ],
+  "site_bonus": [
+    "Прилад, що відповідає цілі, був на борту: діяв науковий множник точки.",
+    "The instrument matching the target was aboard: the site science multiplier applied."
+  ],
+  "site_missing": [
+    "Потрібного для цієї точки приладу не було або він вимкнувся через нестачу енергії: множник точки не діяв.",
+    "The instrument this site needs was missing or shut down for lack of power: the site multiplier did not apply."
+  ],
+  "orbit_bonus": [
+    "Множник орбіти й класу супутника збільшив наукову цінність.",
+    "The orbit and satellite class multiplier raised the science value."
+  ],
+  "saturation": [
+    "Наука насичується: кожен наступний прилад додає менше даних, а ціна зростає повністю.",
+    "Science saturates: each extra instrument adds less data while its price is paid in full."
+  ],
+  "transfer_cap": [
+    "Антена й вікна зв’язку не встигли передати все: непередані дані не зараховано.",
+    "The antenna and communication windows could not send everything: untransmitted data was not credited."
+  ],
+  "telemetry": [
+    "Після втрати апарата зараховано лише частку даних, переданих у польоті.",
+    "After the vehicle was lost only the share of data downlinked in flight was credited."
+  ],
+  "grant_penalty": [
+    "Місія виконувалась після екстреного гранту: штраф до очок.",
+    "This mission followed an emergency grant: a score penalty applied."
+  ],
+  "fuel_left": [
+    "Залишок палива після фіналу (частка від того, що лишилось після перельоту).",
+    "Fuel left after the final stage (share of what remained after the transfer)."
+  ],
+  "camera_missing": [
+    "Без увімкненої камери спостереження Землі дало лише 30% науки.",
+    "Without a working camera, Earth observation returned only 30% of the science."
+  ]
+}

@@ -1,0 +1,227 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/screens/landing_level.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/art/flag.png" id="flag"]
+[ext_resource type="Texture2D" path="res://assets/art/beacon.png" id="beacon"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_ground_tiles_02.png" id="g_tile"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_surface_rim.png" id="g_edge"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_pole_far.png" id="g_far"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_pole_mid.png" id="g_mid"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/landing_pad.png" id="g_pad"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_cracked_slab.png" id="d_moon_cracked_slab"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_crater_medium.png" id="d_moon_crater_medium"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_boulder_large.png" id="d_moon_boulder_large"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_boulder_medium.png" id="d_moon_boulder_medium"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_pebbles.png" id="d_moon_pebbles"]
+[ext_resource type="Texture2D" path="res://assets/art/moon/moon_buried_rock.png" id="d_moon_buried_rock"]
+[node name="SouthPole" type="Node2D"]
+script = ExtResource("script")
+site_name = "SouthPole"
+base_pad_width = 30.0
+[node name="Backdrop" type="Node2D" parent="."]
+[node name="Far" type="Sprite2D" parent="Backdrop"]
+texture_filter = 1
+texture_repeat = 2
+centered = false
+modulate = Color(0.36,0.4,0.48,1)
+position = Vector2(-40, -8)
+scale = Vector2(0.33333334,0.33333334)
+texture = ExtResource("g_far")
+region_enabled = true
+region_rect = Rect2(0, 0, 5760, 540)
+[node name="Mid" type="Sprite2D" parent="Backdrop"]
+texture_filter = 1
+texture_repeat = 2
+centered = false
+modulate = Color(0.5,0.54,0.62,1)
+position = Vector2(-40, 8)
+scale = Vector2(0.33333334,0.33333334)
+texture = ExtResource("g_mid")
+region_enabled = true
+region_rect = Rect2(0, 0, 5760, 540)
+[node name="Terrain" type="Polygon2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+texture_scale = Vector2(3,3)
+color = Color(0.78,0.8,0.85,1)
+texture = ExtResource("g_tile")
+polygon = PackedVector2Array(0,155.0,8,164.137,16,171.378,24,175.977,32,177.526,40,176.018,48,171.86,56,165.824,64,158.932,72,152.321,80,147.069,88,144.043,96,143.766,104,146.347,112,151.456,120,158.378,128,166.114,136,173.529,144,179.516,152,183.155,160,183.843,168,181.381,176,175.986,184,168.26,192,159.088,200,149.505,208,140.54,216,133.069,224,127.693,232,124.665,240,123.869,248,124.863,256,126.967,264,129.389,272,131.36,280,132.267,288,131.747,296,129.75,304,126.531,312,122.605,320,118.643,328,115.359,336,113.375,344,113.107,352,114.69,360,117.947,368,122.411,376,127.401,384,132.134,392,135.862,400,137.998,408,138.233,416,136.595,424,133.467,432,129.536,440,125.702,448,122.938,456,122.137,464,123.969,472,128.759,480,136.422,488,146.451,496,157.972,504,169.854,512,180.859,520,189.809,528,195.75,536,198.084,544,196.648,552,191.736,560,184.056,568,174.622,576,164.612,584,155.202,592,147.405,600,141.937,608,139.129,616,138.906,624,140.814,632,142,640,142,648,142,656,142,664,142,672,142,680,149.413,688,144.865,696,139.601,704,134.348,712,129.798,720,126.48,728,124.674,736,124.361,744,125.238,752,126.77,760,128.292,768,129.137,776,128.757,784,126.841,792,123.38,800,118.692,808,113.387,816,108.283,824,104.284,832,102.233,840,102.776,848,106.246,856,112.591,864,121.368,872,131.783,880,142.798,888,153.269,896,162.111,904,168.45,912,171.75,920,171.89,928,169.187,936,164.341,944,158.339,952,152.305,960,147.337,960,310,0,310)
+[node name="TerrainBody" type="StaticBody2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TerrainBody"]
+polygon = PackedVector2Array(0,155.0,8,164.137,16,171.378,24,175.977,32,177.526,40,176.018,48,171.86,56,165.824,64,158.932,72,152.321,80,147.069,88,144.043,96,143.766,104,146.347,112,151.456,120,158.378,128,166.114,136,173.529,144,179.516,152,183.155,160,183.843,168,181.381,176,175.986,184,168.26,192,159.088,200,149.505,208,140.54,216,133.069,224,127.693,232,124.665,240,123.869,248,124.863,256,126.967,264,129.389,272,131.36,280,132.267,288,131.747,296,129.75,304,126.531,312,122.605,320,118.643,328,115.359,336,113.375,344,113.107,352,114.69,360,117.947,368,122.411,376,127.401,384,132.134,392,135.862,400,137.998,408,138.233,416,136.595,424,133.467,432,129.536,440,125.702,448,122.938,456,122.137,464,123.969,472,128.759,480,136.422,488,146.451,496,157.972,504,169.854,512,180.859,520,189.809,528,195.75,536,198.084,544,196.648,552,191.736,560,184.056,568,174.622,576,164.612,584,155.202,592,147.405,600,141.937,608,139.129,616,138.906,624,140.814,632,142,640,142,648,142,656,142,664,142,672,142,680,149.413,688,144.865,696,139.601,704,134.348,712,129.798,720,126.48,728,124.674,736,124.361,744,125.238,752,126.77,760,128.292,768,129.137,776,128.757,784,126.841,792,123.38,800,118.692,808,113.387,816,108.283,824,104.284,832,102.233,840,102.776,848,106.246,856,112.591,864,121.368,872,131.783,880,142.798,888,153.269,896,162.111,904,168.45,912,171.75,920,171.89,928,169.187,936,164.341,944,158.339,952,152.305,960,147.337,960,310,0,310)
+[node name="SurfaceEdge" type="Line2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+points = PackedVector2Array(0,155,8,164.137,16,171.378,24,175.977,32,177.526,40,176.018,48,171.86,56,165.824,64,158.932,72,152.321,80,147.069,88,144.043,96,143.766,104,146.347,112,151.456,120,158.378,128,166.114,136,173.529,144,179.516,152,183.155,160,183.843,168,181.381,176,175.986,184,168.26,192,159.088,200,149.505,208,140.54,216,133.069,224,127.693,232,124.665,240,123.869,248,124.863,256,126.967,264,129.389,272,131.36,280,132.267,288,131.747,296,129.75,304,126.531,312,122.605,320,118.643,328,115.359,336,113.375,344,113.107,352,114.69,360,117.947,368,122.411,376,127.401,384,132.134,392,135.862,400,137.998,408,138.233,416,136.595,424,133.467,432,129.536,440,125.702,448,122.938,456,122.137,464,123.969,472,128.759,480,136.422,488,146.451,496,157.972,504,169.854,512,180.859,520,189.809,528,195.75,536,198.084,544,196.648,552,191.736,560,184.056,568,174.622,576,164.612,584,155.202,592,147.405,600,141.937,608,139.129,616,138.906,624,140.814,632,142,640,142,648,142,656,142,664,142,672,142,680,149.413,688,144.865,696,139.601,704,134.348,712,129.798,720,126.48,728,124.674,736,124.361,744,125.238,752,126.77,760,128.292,768,129.137,776,128.757,784,126.841,792,123.38,800,118.692,808,113.387,816,108.283,824,104.284,832,102.233,840,102.776,848,106.246,856,112.591,864,121.368,872,131.783,880,142.798,888,153.269,896,162.111,904,168.45,912,171.75,920,171.89,928,169.187,936,164.341,944,158.339,952,152.305,960,147.337)
+width = 16.0
+texture = ExtResource("g_edge")
+texture_mode = 1
+default_color = Color(0.78,0.8,0.85,1)
+joint_mode = 2
+[node name="Decor" type="Node2D" parent="."]
+[node name="Rock0" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(10.0, 165.04)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock1" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(45.5, 174.20)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_cracked_slab")
+[node name="Rock2" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(87.4, 145.08)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_buried_rock")
+[node name="Rock3" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(133.0, 170.24)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock4" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(166.5, 180.15)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_cracked_slab")
+[node name="Rock5" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(213.9, 139.88)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock6" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(249.9, 124.72)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_buried_rock")
+[node name="Rock7" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(282.6, 128.93)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_buried_rock")
+[node name="Rock8" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(319.2, 115.36)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock9" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(373.8, 123.26)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock10" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(414.5, 132.30)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_medium")
+[node name="Rock11" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(445.9, 125.77)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_cracked_slab")
+[node name="Rock12" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(485.2, 153.36)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock13" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(525.2, 195.24)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_pebbles")
+[node name="Rock14" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(570.9, 176.97)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock15" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(604.9, 141.71)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_buried_rock")
+[node name="Rock16" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(727.7, 124.57)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_pebbles")
+[node name="Rock17" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(776.3, 117.52)
+scale = Vector2(0.33333334,0.33333334)
+flip_h = true
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_large")
+[node name="Rock18" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(825.8, 102.55)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_medium")
+[node name="Rock19" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(866.0, 146.25)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_crater_medium")
+[node name="Rock20" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(902.7, 168.64)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_cracked_slab")
+[node name="Rock21" type="Sprite2D" parent="Decor"]
+texture_filter = 1
+position = Vector2(935.0, 164.38)
+scale = Vector2(0.33333334,0.33333334)
+modulate = Color(0.78,0.8,0.85,1)
+texture = ExtResource("d_moon_boulder_medium")
+[node name="LandingPad" type="Node2D" parent="."]
+position = Vector2(635.0,142)
+[node name="Strip" type="Polygon2D" parent="LandingPad"]
+texture_filter = 1
+texture_repeat = 2
+texture_scale = Vector2(3,3)
+texture = ExtResource("g_pad")
+texture_offset = Vector2(0,20)
+polygon = PackedVector2Array(0,0,30,0,30,4,0,4)
+[node name="LeftFlag" type="Sprite2D" parent="LandingPad"]
+scale = Vector2(0.33333334,0.33333334)
+texture_filter = 1
+position = Vector2(0,-8)
+texture = ExtResource("flag")
+[node name="RightFlag" type="Sprite2D" parent="LandingPad"]
+scale = Vector2(0.33333334,0.33333334)
+texture_filter = 1
+position = Vector2(30,-8)
+texture = ExtResource("flag")
+[node name="Beacon" type="Sprite2D" parent="LandingPad"]
+scale = Vector2(0.33333334,0.33333334)
+texture_filter = 1
+position = Vector2(15.0,-4)
+texture = ExtResource("beacon")
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(330,70)
+[node name="Shadows" type="Node2D" parent="."]

@@ -1,0 +1,58 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/screens/screen_shell.gd" id="script"]
+[node name="Panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("script")
+theme = ExtResource("theme")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 1896.0
+offset_bottom = 990.0
+color = Color(0.07,0.115,0.18,0.97)
+mouse_filter = 2
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 48.0
+offset_right = 1584.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.9,0.72,0.36,1)
+theme_override_font_sizes/font_size = 44
+text = "Місія"
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1608.0
+offset_top = 48.0
+offset_right = 1860.0
+offset_bottom = 138.0
+text = "Назад"
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 192.0
+offset_right = 1860.0
+offset_bottom = 984.0
+horizontal_scroll_mode = 0
+[node name="Body" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+[node name="Footer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 1008.0
+offset_right = 1860.0
+offset_bottom = 1074.0
+theme_override_colors/font_color = Color(0.55,0.61,0.68,1)
+theme_override_font_sizes/font_size = 24
+text = "MISSION ARCHITECT / ОФЛАЙН"

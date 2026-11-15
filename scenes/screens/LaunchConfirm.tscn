@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://scenes/screens/Panel.tscn" id="base"]
+[node name="LaunchConfirm" instance=ExtResource("base")]
+title_uk = "Запустити?"
+title_en = "Launch?"
+[node name="Title" parent="." index="1"]
+text = "Запустити?"

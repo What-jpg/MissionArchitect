@@ -1,0 +1,122 @@
+[
+  {
+    "title": [
+      "Що це за гра?",
+      "What is this game?"
+    ],
+    "text": [
+      "Ти — головний конструктор ракет. Твоя мета: збудувати ракету, долетіти до цілі та привезти наукові дані. За дані платять гроші, а за гроші ти будуєш нові ракети. На рівні «Юний астронавт» перша місія — навчання: золота рамка показує, що натиснути, а картка пояснює навіщо.",
+      "You are the chief rocket designer. Your goal: build a rocket, reach the target and bring back science data. Data earns money, and money builds new rockets. On the Young astronaut level the first mission is a tutorial: a gold frame shows what to press and a card explains why."
+    ]
+  },
+  {
+    "title": [
+      "Як ходити",
+      "How to move"
+    ],
+    "text": [
+      "A і D (або стрілки) — іти вліво й вправо. Біля драбини S — вниз, W — вгору. Підійди до речі й натисни E, щоб нею скористатися. Золота стрілка показує, куди йти далі. F11 — на весь екран, M — вимкнути або ввімкнути звук. Гучність музики й звуків налаштовується в головному меню («Звук») або в паузі.",
+      "A and D (or the arrows) walk left and right. At the ladder S goes down, W goes up. Walk up to something and press E to use it. The gold arrow shows where to go next. F11 toggles full screen, M turns sound on or off. Music and effects volume are in the main menu (“Sound”) or the pause menu."
+    ]
+  },
+  {
+    "title": [
+      "Крок 1. Обери, куди летіти",
+      "Step 1. Choose where to fly"
+    ],
+    "text": [
+      "Підійди до ЦЕНТРУ КЕРУВАННЯ (комп'ютери нагорі) і натисни E. Почни з «Орбіти Землі» — це найлегша місія. Місяць відкривається пізніше. Для «Орбіти Землі» тут же обери рівень супутника.",
+      "Walk to MISSION CONTROL (the computers upstairs) and press E. Start with “Earth orbit”: it is the easiest mission. The Moon unlocks later. For “Earth orbit”, pick the satellite level right here."
+    ]
+  },
+  {
+    "title": [
+      "Крок 2. Збери ракету",
+      "Step 2. Build the rocket"
+    ],
+    "text": [
+      "Спустись у МАЙСТЕРНЮ і натисни E. Прості правила:\n• Паливо — щоб летіти далі. Але з паливом ракета важча.\n• Важка ракета потребує сильнішого двигуна.\n• Панелі дають електрику приладам.\n• Прилади збирають дані, антена відправляє їх додому.\nСправа є список перевірки: зелена галочка — добре, червоний хрестик — так не полетить.",
+      "Go down to the WORKSHOP and press E. Simple rules:\n• Fuel lets you fly farther, but makes the rocket heavier.\n• A heavy rocket needs a stronger engine.\n• Panels power the instruments.\n• Instruments collect data; the antenna sends it home.\nOn the right there is a checklist: a green tick is good, a red cross means it won't work."
+    ]
+  },
+  {
+    "title": [
+      "Крок 3. Запуск",
+      "Step 3. Launch"
+    ],
+    "text": [
+      "Вийди надвір до СТАРТУ (ракета біля вежі) і натисни E. Перевір список і натисни «Так, запустити». Гроші знімаються лише тепер. Під час підйому швидко натискай Пробіл раз за разом — кожне натискання розганяє ракету. Шкала «Прискорення» показує, наскільки швидко ти летиш.",
+      "Go outside to the LAUNCH PAD (the rocket by the tower) and press E. Check the list and press “Yes, launch”. Money is spent only now. While climbing, tap Space again and again: every press speeds the rocket up. The “Boost” bar shows how fast you are going."
+    ]
+  },
+  {
+    "title": [
+      "Крок 4. Орбіта Землі",
+      "Step 4. Earth orbit"
+    ],
+    "text": [
+      "Риска бігає по смужці. Натисни Пробіл, коли вона в зеленій зоні. Чим більше палива залишилось, тим ширша зелена зона.",
+      "A marker slides along the bar. Press Space when it is inside the green zone. The more fuel you have left, the wider the green zone."
+    ]
+  },
+  {
+    "title": [
+      "Крок 5. Посадка на Місяць",
+      "Step 5. Landing on the Moon"
+    ],
+    "text": [
+      "W або Пробіл — двигун (гальмує падіння). A і D — нахил. Сідай повільно й рівно на золоту смугу між прапорцями. Порада: гальмуй завчасно, не чекай самої землі. Опори в майстерні роблять посадку легшою.",
+      "W or Space fires the engine to slow your fall. A and D tilt. Land slowly and straight on the gold strip between the flags. Tip: brake early, don't wait until the last moment. Landing legs from the workshop make it easier."
+    ]
+  },
+  {
+    "title": [
+      "Гроші й дані",
+      "Money and data"
+    ],
+    "text": [
+      "Після місії ти отримуєш дані (МБ — мегабайти). У ЛАБОРАТОРІЇ дані можна продати за гроші або витратити на нові прилади й нові місії. Ціна даних трохи змінюється — продавай, коли ціна вища.",
+      "After a mission you get data (MB, megabytes). In the LABORATORY you can sell data for money or spend it on new instruments and new missions. The data price changes a little: sell when it is higher."
+    ]
+  },
+  {
+    "title": [
+      "Якщо не вийшло",
+      "If it didn't work"
+    ],
+    "text": [
+      "Нічого страшного! У звіті є розділ «Що змінити наступного разу» — там простими словами написано, що пішло не так і скільки, наприклад, палива додати. Якщо гроші закінчились, тобі дадуть допомогу на нову ракету.",
+      "No problem! The report has a “What to change next time” section that says in plain words what went wrong and, for example, how much fuel to add. If you run out of money, you get help for a new rocket."
+    ]
+  },
+  {
+    "title": [
+      "Калькулятор формул",
+      "Formula calculator"
+    ],
+    "text": [
+      "У майстерні є кнопка «Калькулятор» (на рівнях «Юний астронавт» і «Інженер»). Обери формулу, підстав дані — двигун, антену, масу, доби — і одразу побачиш результат. Розрахунок можна зберегти з назвою, відкрити пізніше або видалити. На рівні «Директор місії» калькулятора немає: рахуєш сам.",
+      "The workshop has a “Calculator” button (Young astronaut and Engineer levels). Pick a formula, fill in the data (engine, antenna, mass, days) and the result appears at once. You can save a calculation with a name, open it later or delete it. At Mission director level there is no calculator: you do the maths yourself."
+    ]
+  },
+  {
+    "title": [
+      "Справжні дані NASA",
+      "Real NASA data"
+    ],
+    "text": [
+      "Місяць і Земля в грі намальовані зі справжніх знімків NASA: мозаїки камери LRO (Lunar Reconnaissance Orbiter) і карти Землі «Blue Marble». Цифри з довідника NASA Moon Fact Sheet: радіус Місяця 1737,4 км, сила тяжіння на поверхні 1,62 м/с² (у 6 разів менше, ніж на Землі — тому лендер падає повільно), друга космічна для Місяця 2,38 км/с, середня відстань до Землі 384 400 км, оберт навколо Землі за 27,3 доби. Місця посадки — справжні: Море Спокою («Аполлон-11»), нагір’я Декарта («Аполлон-16») і кратер Шеклтон біля південного полюса.",
+      "The Moon and Earth in the game are drawn from real NASA imagery: the LRO (Lunar Reconnaissance Orbiter) camera mosaic and the “Blue Marble” Earth map. Numbers come from the NASA Moon Fact Sheet: Moon radius 1,737.4 km, surface gravity 1.62 m/s² (six times weaker than Earth's, so the lander falls slowly), lunar escape velocity 2.38 km/s, mean distance to Earth 384,400 km, one orbit around Earth every 27.3 days. The landing sites are real: the Sea of Tranquility (Apollo 11), the Descartes Highlands (Apollo 16) and Shackleton crater near the south pole."
+    ]
+  },
+  {
+    "title": [
+      "Для допитливих: формули",
+      "For the curious: formulas"
+    ],
+    "text": [
+      "Δv = Isp × g₀ × ln(m₀/mf). Запаси ступенів додаються; відпрацьована конструкція відкидається. TWR = F/(m₀ × g). g₀ = 9,80665 м/с². Використовуйте т і кН або кг і Н. Місячне g = 1,62 м/с². Енергія: вироблення панелей + запас батарей / (доби × 24) має покривати споживання. Дані за місію = D_база × M_точки × (1 − e^(−V/V₀)) × L × K × T, де V — наукова цінність увімкнених приладів, L — частка часу роботи, K — результат (1 / 0,7 / частка переданого при аварії), T — частка, яку встигла передати антена. Прибуток = дані × 100 − витрати; ROI = прибуток / витрати.",
+      "Δv = Isp × g₀ × ln(m₀/mf). Stage budgets add; spent structure is discarded. TWR = F/(m₀ × g). g₀ = 9.80665 m/s². Use tonnes and kN or kg and N. Lunar g = 1.62 m/s². Power: panel output + battery energy / (days × 24) must cover demand. Mission data = D_base × M_site × (1 − e^(−V/V₀)) × L × K × T, where V is the science value of powered instruments, L the operating share of the lifetime, K the result (1 / 0.7 / downlinked share after a loss) and T the share the antenna managed to send. Profit = data × 100 − cost; ROI = profit / cost."
+    ]
+  }
+]

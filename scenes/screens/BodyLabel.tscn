@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Theme" path="res://assets/interface_theme.tres" id="theme"]
+[node name="BodyLabel" type="Label"]
+size_flags_horizontal = 3
+theme = ExtResource("theme")
+text = "Характеристики деталі"
+autowrap_mode = 3
