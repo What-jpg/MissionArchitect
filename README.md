@@ -19,13 +19,13 @@ The game and UI are rendered at **1920×1080**. World geometry and physics remai
 
 ## Controls
 
-| Action | Keyboard | Gamepad in the final version |
-|---|---|---|
-| Move in the hub / rotate the lander | A/D or ←/→ | Left stick |
-| Ladder between floors | S/↓ — down, W/↑ — up; movement is animated | — |
-| Open a station | E only when near the object and on the same floor | — |
-| Thrust / impulse | W / ↑ / Space | A / right trigger |
-| Pause | Esc | Start |
+| Action | Keyboard |
+|---|---|
+| Move in the hub / rotate the lander | A/D or ←/→ |
+| Ladder between floors | S/↓ — down, W/↑ — up; movement is animated |
+| Open a station | E only when near the object and on the same floor |
+| Thrust / impulse | W / ↑ / Space |
+| Pause | Esc |
 
 ## Implemented Features
 
